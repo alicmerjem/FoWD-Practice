@@ -1,0 +1,26 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color: green;
+    text-align: center;
+}
+
+form.form{
+    text-align: center;
+}
+
+form.form label, p, button, input {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+button {
+    color: white;
+    background-color: green;
+    font-size: 16px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 16px;
+}

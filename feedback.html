@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css"> 
+</head>
+<body>
+    <h1>CV Creator Tool Feedback</h1>
+    <hr>
+    
+    <form class="form">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email"> <br>
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password"> <br>
+
+        <label for="comments">Your Feedback: </label> <br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea> <br>
+
+        <label for="question">How did you learn about our CV creator tool?</label>
+        <select id="question" name="question">
+            <option value="" disabled selected>Select one of the options</option>
+            <option value="fb">Facebook</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="ig">Instagram</option>
+            <option value="tt">TikTok</option>
+            <option value="other">Other</option>
+        </select> <br>
+
+        <label for="newsletter">Sign me up for the newsletter!</label>
+        <input type="checkbox" id="newsletter" name="newsletter"> <br>
+
+        <p>Would you use this CV Creator Tool again? </p>
+        <input type="radio" id="yes" name="option" value="yes" required>
+        <label for="male">Yes</label><br>
+        
+        <input type="radio" id="no" name="option" value="no" required>
+        <label for="female">No</label><br>
+
+        <input type="radio" id="maybe" name="option" value="maybe" required>
+        <label for="female">Maybe</label><br>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>
