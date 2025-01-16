@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="skills.css">
+</head>
+<body>
+    <h1>Drag and Drop Skills</h1>
+
+    <div>
+        <p id="html" class="skill" draggable="true">HTML</p>
+        <p id="html" class="skill" draggable="true">CSS</p>
+        <p id="html" class="skill" draggable="true">JavaScript</p>
+        <p id="html" class="skill" draggable="true">Python</p>
+    </div>
+
+    <div id="skills" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <p>Drop your skill here!</p>
+    </div>
+
+    <script src="skills.js"></script>
+</body>
+</html>

@@ -6,7 +6,17 @@
     <title>CV</title>
 </head>
 <body>
-    <h1>Merjem Alić</h1> 
+    <header>
+        <h1>Merjem Alić</h1>
+    </header> 
+
+    <nav>
+        <ul>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
 
     <hr>
 
@@ -55,9 +65,32 @@
 
     <hr>
 
+    <h2>Your Location</h2>
+    <button onclick="getLocation()">Get My Location</button>
+    <div id="location"></div>
+    <div id="error"></div>
+
+    <hr>
+
+    <article>
+        <h2>Professional Experience</h2>
+        <p>Over the past couple of years, I was focused on frontend development, perfecting my skills in HTML, CSS, JS, Node.js and React.</p>
+        <p>I have worked on 2 big projects, one being an animal adoption platform named PetLink and the other one being a sotware solution for healthcare workers and patients.</p>
+    </article>
+
+    <hr>
+
     <h2>Personal Information</h2>
     <p>Full name: Merjem Alić</p>
     <p>Email: merjem.alic@stu.ibu.edu.ba</p>
     <p>Location: Sarajevo, Bosnia and Herzegovina</p>
+
+    <hr>
+
+    <footer>
+        <p>&copy 2024 Merjem Alić</p>
+    </footer>
+
+    <script src="geolocation.js"></script>
 </body>
 </html>

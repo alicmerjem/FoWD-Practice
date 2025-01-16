@@ -1,0 +1,15 @@
+#skills {
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px dashed;
+    border-radius: 5px;
+}
+
+.skill{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: move;
+}
