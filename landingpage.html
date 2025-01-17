@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom Navbar Styles */
+    .navbar-custom {
+      background-color: #0056b3; 
+      padding: 0.5rem 1rem; 
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: white; 
+    }
+    .navbar-custom .nav-link:hover {
+      color: #0056b3; 
+    }
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-custom:hover {
+      background-color: #0056b3; 
+    }
+
+    h1, h3 {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      font-weight: bold;
+    }
+
+    /* Button Styling */
+    #button1 {
+      display: block; /* Makes it behave like a block-level element */
+      margin: 30px auto; /* Centers horizontally */
+      padding: 10px 20px; /* Adds space inside the button */
+      background-color: #28a745; /* Green background */
+      color: white; /* White text */
+      border: none; /* Removes default border */
+      border-radius: 8px; /* Rounded corners */
+      font-size: 18px; /* Increases font size */
+      text-align: center; /* Centers text */
+      cursor: pointer; /* Adds pointer cursor */
+    }
+
+    #button1:hover {
+      background-color: #218838; /* Slightly darker green on hover */
+    }
+
+    /* Remove link underline */
+    #button1 a {
+      color: white; /* Keeps link text white */
+      text-decoration: none; /* Removes underline */
+    }
+
+    #button1 a:hover {
+      color: white; /* Prevents color change on hover */
+    }
+
+    h2{
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    p.othertext{
+        text-align: center;
+        color: #218838;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+    }
+
+    .footer1{
+        padding-top: 20px;
+    }
+
+    .footer3{
+        padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand" href="landingpage.html">CV Creator Tool</a>
+      <!-- Toggler for small screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <!-- Right Side Buttons -->
+        <div class="ms-auto d-flex gap-2">
+          <button class="btn btn-custom" type="button"><a href="login.html" style="color: white;">Login</a></button>
+          <button class="btn btn-custom" type="button"><a href="registration.html" style="color: white;">Register</a></button>
+          <button class="btn btn-custom" type="button" data-bs-toggle="modal" data-bs-target="#notificationModal">Notifications</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <h1>Welcome to CV Creator Tool!</h1>
+
+  <h3>Create, Customize and Download Professional CVs in Minutes!</h3>
+
+  <hr>
+
+  <!-- Styled Button -->
+  <button type="button" id="button1">
+    <a href="#">Create Your CV Now!</a>
+  </button>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">AI Plagiarism Checker</h5>
+                    <p class="card-text">Ensure originality with AI-powered plagiarism checker</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Top 10 Interview Questions</h5>
+                    <p class="card-text">Prepare confidently with curated interview questions</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Template Library</h5>
+                    <p class="card-text">Choose from a wide variety of CV templates.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <h2>About CV Creator Tool</h2>
+
+  <hr>
+
+  <p class="othertext">CV Creator Tool is your go-to platform for building professional resumes. With a wide range of customizable templates, AI-powered tools, and expert resources, we help you stand out <br> in the job market. Get ready to create a stunning CV that highlights your skills and achievements effrotlessly.</p>
+
+    <!-- FAQ Section -->
+    <div class="container faq-section">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          
+          <!-- Question 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                1. Subscription Deadline?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                The subscription deadline is the 15th of every month. Please make sure to complete your registration before this date to avoid delays.
+              </div>
+            </div>
+          </div>
+    
+          <!-- Question 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                2. Who can apply?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Anyone who is looking to create a professional CV and needs assistance with their application can apply.
+              </div>
+            </div>
+          </div>
+    
+          <!-- Question 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                3. How to apply?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                To apply, click the "Create Your CV Now!" button on the homepage, fill in the required information, and submit the form.
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+
+        <!-- Check out different notification types -->
+  <h2 class="text-center">Check Out Different Notification Types</h2>
+
+   <!-- Check out different notification types -->
+   <h2 class="text-center">Check Out Different Notification Types</h2>
+
+   <div class="container">
+     <!-- Notification 1 (White background, Blue text) -->
+     <div class="alert alert-primary mb-3" role="alert">
+       Notification 1: This is a primary notification!
+     </div>
+ 
+     <!-- Notification 2 (Red background, Disabled) -->
+     <button class="alert alert-danger mb-3" disabled>
+       Notification 2: This notification is disabled!
+     </button>
+ 
+     <!-- Notification 3 (Green background) -->
+     <div class="alert alert-success mb-3" role="alert">
+       Notification 3: This is a success notification!
+     </div>
+   </div>
+
+   <h2 style="text-align: center; padding-bottom: 10px;">Our Location</h2>
+
+   <div class="container">
+    <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE_HERE" 
+    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+   </div>
+  
+  <footer>
+    <p class="footer1"> &copy 2024 CV Creator Tool. All Rights Reserved.</p>
+    <p class="footer2"><a href="#">Privacy Policy</a> <a href="#">Terms Of Service</a> <a href="#">Contact Us</a></p>
+
+    <p><b>Contact: </b>+38761234567</p>
+    <p><b>Email: </b>something@gmail.com</p>
+    <p class="footer3"><b>Work Hours: </b>8:00 - 16:00 (Work days only!)</p>
+
+  </footer>
+
+  <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="notificationModalLabel">Notifications</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>You currently have no new notifications.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
