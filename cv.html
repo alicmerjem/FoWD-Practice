@@ -3,94 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
+    <title>Merjem Alić - Web Developer</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
 </head>
 <body>
-    <header>
-        <h1>Merjem Alić</h1>
-    </header> 
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="profile-placeholder.jpg" alt="Profile Picture" class="profile-picture">
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p><strong>Phone:</strong> 123-456-7890</p>
+                <p><strong>Email:</strong> merjem.alic@stu.ibu.edu.ba</p>
+                <p><strong>Location:</strong> Sarajevo, Bosnia and Herzegovina</p>
+            </div>
+            <div class="education">
+                <h3>Education</h3>
+                <ul>
+                    <li>Bachelor's Degree in IT - International Burch University</li>
+                    <li>Certified Power BI Data Analyst - Udemy</li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>C++, Python</li>
+                    <li>MySQL</li>
+                    <li>Version Control (Git, GitHub)</li>
+                    <li>WordPress</li>
+                </ul>
+            </div>
+        </aside>
 
-    <nav>
-        <ul>
-            <li><a href="#aboutme">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    <h2>Introduction</h2>
-    <p>Hello. My name is Merjem Alić. I am an aspiring Software Engineer. I specialize in Web Development and creating highly performative web pages.</p>
-    <p>I have a strong background in front-end development. I have worked with technologies such as HTML, CSS, JavaScript, C++, MySQL and Python. <br> The goal of my work is to create web pages that are not only responsive and functional, but also perform well on the UX and UI part.</p>
-
-    <hr>
-
-    <h2>Skills</h2>
-    <p>Skills: </p>
-    <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>C++, Python</li>
-        <li>MySQL</li>
-        <li>Version Control (Git, Github)</li>
-        <li>WordPress</li>
-    </ul>
-
-    <hr>
-
-    <h2>Experience</h2>
-    <ul>
-        <li><b>Web Developer</b> at XYZ Corp (2018 - Present)</li>
-        <li><b>Frontend Developer</b> at ABC Ltd (2016 - 2018)</li>
-        <li><b>Freelance Developer</b> (2015 - 2016)</li>
-    </ul>
-
-    <hr>
-
-    <h2>Education & Certifications</h2>
-    <ol>
-        <li>Bachelor's Degree in IT - <i>International Burch University</i></li>
-        <li>Certified Power BI Data Analyst - <i>Udemy</i></li>
-    </ol>
-
-    <hr>
-
-    <h2>Personal Projects</h2>
-    <p>The two of my most significant personal projects include: </p>
-    <ul>
-        <li>PetLink - An animal adoption platform made to link owners to their future furry friends.</li>
-        <li>CureOn - A healthcare software solution made for medical professionals and patients.</li> 
-    </ul>
-    <p>Visit my <a href="https://github.com/alicmerjem">GitHub Profile</a> for more information.</p>
-
-    <hr>
-
-    <h2>Your Location</h2>
-    <button onclick="getLocation()">Get My Location</button>
-    <div id="location"></div>
-    <div id="error"></div>
-
-    <hr>
-
-    <article>
-        <h2>Professional Experience</h2>
-        <p>Over the past couple of years, I was focused on frontend development, perfecting my skills in HTML, CSS, JS, Node.js and React.</p>
-        <p>I have worked on 2 big projects, one being an animal adoption platform named PetLink and the other one being a sotware solution for healthcare workers and patients.</p>
-    </article>
-
-    <hr>
-
-    <h2>Personal Information</h2>
-    <p>Full name: Merjem Alić</p>
-    <p>Email: merjem.alic@stu.ibu.edu.ba</p>
-    <p>Location: Sarajevo, Bosnia and Herzegovina</p>
-
-    <hr>
-
-    <footer>
-        <p>&copy 2024 Merjem Alić</p>
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Merjem Alić</h1>
+                <p>Web Developer</p>
+            </header>
+            <section class="introduction">
+                <h2>Introduction</h2>
+                <p>Hello, my name is Merjem Alić. I am an aspiring Software Engineer specializing in Web Development. I create highly performative web pages with a focus on UX/UI design.</p>
+            </section>
+            <section class="experience">
+                <h2>Experience</h2>
+                <ul>
+                    <li><strong>Web Developer</strong> at XYZ Corp (2018 - Present)</li>
+                    <li><strong>Frontend Developer</strong> at ABC Ltd (2016 - 2018)</li>
+                    <li><strong>Freelance Developer</strong> (2015 - 2016)</li>
+                </ul>
+            </section>
+            <section class="projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>PetLink</h3>
+                    <p>An animal adoption platform connecting pet owners to their future furry friends.</p>
+                </div>
+                <div class="project">
+                    <h3>CureOn</h3>
+                    <p>A healthcare software solution for medical professionals and patients.</p>
+                </div>
+            </section>
+            <section class="hobbies">
+                <h2>Hobbies</h2>
+                <p>Photography, traveling, volunteering, and exploring new technologies.</p>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Merjem Alić</p>
     </footer>
-
-    <script src="geolocation.js"></script>
 </body>
 </html>

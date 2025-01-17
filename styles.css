@@ -1,0 +1,63 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container for overall layout */
+.container {
+    display: flex;
+    flex-direction: row; /* Ensures the aside and main sections are side by side */
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 25%; /* 25% of the screen width */
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 20px;
+    border-right: 2px solid #ddd; /* Divider between sections */
+}
+
+.profile-picture {
+    width: 100%;
+    border-radius: 50%; /* Makes the image circular */
+    margin-bottom: 20px;
+}
+
+.contact, .education, .skills {
+    margin-bottom: 20px;
+}
+
+.contact h3, .education h3, .skills h3 {
+    margin-top: 0;
+}
+
+/* Main Content Styling */
+.main-content {
+    width: 75%; /* Remaining 75% of the screen width */
+    padding: 20px;
+}
+
+.main-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.introduction, .experience, .projects, .hobbies {
+    margin-bottom: 20px;
+}
+
+.projects .project {
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-top: 2px solid #ddd;
+}
