@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+
+    <h1>JavaScript Fundamentals</h1>
+
+    <button onclick="alert('Hello world from inline script!')">Click me!</button>
+
+    <br>
+
+    <button onclick="sayHello()">Click me vol2!</button>
+
+    <p id="demo"></p>
+
+
+    <script>
+        document.getElementById('demo').innerHTML = 'I am writing into a specific element!';
+    </script>
+
+    <script>
+        function sayHello() {
+            alert('Hello from internal script!')
+        }
+    </script>
+
+    <script>
+        let text = 'something';
+        let text2 = 'different';
+
+        let length = text.length;
+        let slice = text.slice(0, 2);
+        let substring = text.substring(2, 4);
+        let lower = text.toLowerCase();
+        let upper = text.toUpperCase();
+        let concat = text.concat(' ', text2);
+
+        console.log(length, slice, substring, lower, upper, concat)
+    </script>
+
+    <script>
+        let result=myFunction(4, 3);
+        console.log(result)
+
+        function myFunction(a, b){
+            return a*b;
+        }
+    </script>
+
+    <script>
+        if (time<10){
+            greeting = 'Good morning!'
+        }
+        else if (time<20){
+            greeting = 'Good day.'
+        }
+        else{
+            greeting = 'Good evening.'
+        }
+    </script>
+
+    <script>
+        switch (new Date().getDay()) {
+            case 0:
+                day = 'Monday';
+                break;
+            case 1:
+                day = 'Tuesday';
+                break;
+        // and so on and so forth
+        }
+    </script>
+
+    <script>
+        for (let i=0; i<=15; i++) {
+            console.log(i)
+        }
+    </script>
+
+    <script>
+        while (i<10){
+            text+='The number is ' + i;
+            i++;
+        }
+    </script>
+
+    <script>
+        do {
+            text += 'Number ' + i;
+            i++;
+        }
+        while(i<10)
+    </script>
+
+    <h1>JavaScript "this"</h1>
+
+    <p>This example demonstrate that in Arrow Functions, the "this" keyword represents the object that owns the function, no matter who calls the function.</p>
+
+    <p>Click the button to execute the "hello" function again, and you will see that "this" still  represents the window object.</p>
+
+    <button id="btn">Click me again!</button>
+
+    <p id="demo1"></p>
+
+    <script>
+        let hello = '';
+
+        hello = () => {
+            document.getElementById('demo1').innerHTML += this;
+        }
+
+        // now we have to call the 
+        // function with the window obj
+        window.addEventListener('load', hello);
+
+        // button object calls the function
+        document.getElementById('btn').addEventListener('click', hello);
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        try{
+            addalert('welcome guests!')
+        }
+        catch(err) {
+            document.getElementById('demo3').innerHTML=err.message;
+        }
+    </script>
+    
+</body>
+</html>

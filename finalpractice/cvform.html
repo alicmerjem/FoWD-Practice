@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CV Generator - Form</title>
+</head>
+<body>
+  <h1>Generate Your CV</h1>
+  <form id="cvForm">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="bio">Short Bio:</label><br>
+    <textarea id="bio" name="bio" rows="5" cols="30"></textarea><br><br>
+
+    <button type="button" onclick="submitForm()">Generate CV</button>
+  </form>
+
+  <script>
+    function submitForm() {
+      // Get the form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const bio = document.getElementById('bio').value;
+
+      // Save the data to localStorage
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      localStorage.setItem('bio', bio);
+
+      // Redirect to the CV page
+      window.location.href = 'cv.html';
+    }
+  </script>
+</body>
+</html>
