@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced data types</title>
+</head>
+<body>
+    <script>
+        const person = {
+            fname:"Jane",
+            lname:"Doe",
+            age:50,
+            eyecolor:"blue",
+            fullName : function() {
+                return this.fname + ' ' + this.lname;
+            }
+        };
+    </script>
+
+    <p id="demo"></p>
+
+    <script>
+        // display the objects
+        const person2 = {
+            name:"John",
+            age:30,
+            city:"New York"
+        }
+
+        let text = ''
+        for (let x in person){
+            text+=person[x] + ' ';
+        }
+
+        document.getElementById('demo').innerHTML = text;
+
+        // stringify
+        const person3 = {
+            name:"josh",
+            age:30,
+            city:'Los Angeles'
+        }
+
+        let myString = JSON.stringify(person3);
+
+        document.getElementById('demo').innerHTML = myString;
+
+    </script>
+
+    <script>
+        const fruits = ['banana', 'orange', 'apple', 'mango'];
+        let length = fruits.length;
+        console.log(length)
+
+        console.log(fruits.sort())
+
+        console.log(fruits.push('lemon'))
+
+        console.log(Array.isArray(fruits))
+        console.log(typeof(fruits))
+
+        console.log(fruits.at(1))
+        console.log(fruits.join(', '))
+
+        let lastFruit = fruits.pop()
+        console.log(lastFruit)
+
+        let firstFruit = fruits.shift()
+        console.log(firstFruit)
+
+        fruits.unshift('grapes')
+        console.log(fruits)
+
+        let moreFruits = ['kiwi', 'mango']
+        console.log(fruits.concat(moreFruits))
+
+        console.log(fruits.slice(0, 1))
+
+        console.log(fruits.toString())
+    </script>
+
+    <p id="demo4"></p>
+
+    <script>
+        // using a for loop
+        const fruitss = ['banana', 'orange', 'apple', 'mango']
+        let fLen = fruitss.length;
+
+        let textt = '<ul>'
+        for (let i=0; i< fLen; i++){
+            textt += "<li>" + fruitss[i] + '</li>';
+        }
+        textt += '</ul>'
+        document.getElementById('demo4').innerHTML = textt;
+    </script>
+
+    <p id="demo5"></p>
+
+    <script>
+        const fruits1 = ['apple', 'mango', 'cherry']
+        
+        let text3 = '<ul>'
+        fruits1.forEach(myFunction);
+        text3 += '</ul>'
+
+        function myFunction(value){
+            text3+= '<li>' + value + '</li>'
+        }
+    </script>
+
+    <script>
+        // doubling numbers using
+        // for each
+        const numbers = [1, 2, 3, 4]
+        numbers.forEach((number)=>{
+            console.log(number*2)
+        });
+    </script>
+
+    <script>
+        // transforming an arr w/ map
+        const numbers1 = [45, 4, 9, 16, 25]
+        const numbers2 = numbers1.map(myFunction);
+
+        function myFunction(value, index, array) {
+            return value * 2;
+        }
+
+        console.log(numbers2)
+    </script>
+</body>
+</html>
