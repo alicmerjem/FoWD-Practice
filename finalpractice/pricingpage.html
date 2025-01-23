@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Page</title>
+</head>
+<body>
+    <h1>Pricing Page</h1>
+
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Actual Price</th>
+        </tr>
+
+        <tr>
+            <td>Product A</td>
+            <td>10</td>
+            <td>2</td>
+            <td class="price"></td>
+        </tr>
+
+        <tr>
+            <td>Product B</td>
+            <td>15</td>
+            <td>1</td>
+            <td class="price"></td>
+        </tr>
+
+        <tr>
+            <td>Product C</td>
+            <td>20</td>
+            <td>3</td>
+            <td class="price"></td>
+        </tr>
+    </table>
+
+    <button id="buy">Buy</button>
+
+    <div id="modal" style="display: none;">
+        <p>Total: <span id="total"></span></p>
+        <p>Average (rounded): <span id="avg"></span></p>
+        <button onclick="document.getElementById('modal').style.display='none';">Close</button>
+    </div>
+
+    <script>
+        // Calculate and display the actual prices in the table
+        const rows = document.querySelectorAll('tr');
+        rows.forEach(row => {
+            const cells = row.children;
+            if (cells.length === 4) {
+                const price = parseFloat(cells[1].textContent);
+                const qty = parseInt(cells[2].textContent);
+                if (!isNaN(price) && !isNaN(qty)) {
+                    cells[3].textContent = price * qty;
+                }
+            }
+        });
+
+        // Handle the Buy button click
+        document.getElementById('buy').onclick = () => {
+            const prices = document.querySelectorAll('.price');
+            let total = 0;
+
+            prices.forEach(priceCell => {
+                total += parseFloat(priceCell.textContent);
+            });
+
+            const avg = total / prices.length;
+
+            // Display total and average in the modal
+            document.getElementById('total').textContent = total.toFixed(2);
+            document.getElementById('avg').textContent = Math.floor(avg) + ' (down), ' + Math.ceil(avg) + ' (up)';
+
+            // Show the modal
+            document.getElementById('modal').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
